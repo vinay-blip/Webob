@@ -16,7 +16,7 @@ const UserSchema = new mongoose.Schema({
         require : true,
     },
     privateuploads : {
-        type : [string],
+        type : [String],
         default : [],
     }
 },{timestamps : true})
