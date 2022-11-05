@@ -15,6 +15,16 @@ const UserSchema = new mongoose.Schema({
         type : String,
         require : true,
     },
+    img : {
+        type : String,
+    },
+    followers_num : {
+        type : Number,
+        default: 0,
+    },
+    following : {
+        type : [String],
+    },
     privateuploads : {
         type : [String],
         default : [],

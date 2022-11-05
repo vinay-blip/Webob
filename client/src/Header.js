@@ -1,6 +1,6 @@
 import React from 'react'
-import menuicon from '/home/prince/Documents/webob/src/icons8-menu-rounded-30.png'
-import logo from '/home/prince/Documents/webob/src/logo.jpeg'
+import menuicon from '../src/icon.png'
+import logo from '../src/logo.jpeg'
 // import Menu from "@material-ui/icons/Menu"
 import Notification from "@material-ui/icons/Notifications"
 

@@ -1,19 +1,19 @@
-import mogoosse from "mongoose"
+import mongoose from "mongoose"
 import bcrypt from "bcryptjs"
 import User from "../models/User.js"
 import { createError } from "../error.js"
 import jwt from "jsonwebtoken"
 
-export const signup = async (req, res,next) => {
+export const signup = async (req, res, next) => {
     try {
         const salt = bcrypt.genSaltSync(10);
         const hash = bcrypt.hashSync(req.body.password, salt);
         const newUser = new User({ ...req.body, password: hash });
-
+      //  console.log(newUser)
         await newUser.save();
-        res.status(200).send("user has been created!");
+        res.status(200).send("user has been created!")
     } catch (err) {
-        next(err);
+        next(err)
     }
 }
 
